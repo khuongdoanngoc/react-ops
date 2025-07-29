@@ -1,0 +1,13 @@
+services:
+    react-ops:
+        build:
+            context: .
+        container_name: react-ops
+        ports:
+                - '3000:80'
+        networks:
+            - ops-network
+
+networks:
+    ops-network:
+        external: true
